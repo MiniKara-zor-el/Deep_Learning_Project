@@ -16,12 +16,17 @@ Upload the data to an S3 bucket through the AWS Gateway so that SageMaker has ac
 
 ## Hyperparameter Tuning
 What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+![Hyperparameter_tuning_jobdetail](https://user-images.githubusercontent.com/96059146/150200030-ea9b0c4c-a68e-41f0-82b9-18f7fbd65525.PNG)
 
 I Deployed a hyperparameter tuning job on sagemaker. and wait for the combination of hyperparameters turn out with best metric. The hyperparameter searchspaces are learning-rate and batchsize. I used Resnet34 pretrained model and 3 fully connected layers to classify the breeds of dogs.
+
+![Best_training_job_summary](https://user-images.githubusercontent.com/96059146/150200115-230663d5-e042-4317-94d1-dcb1f3cc5607.PNG)
+
 
 The Hook was set to record the Loss Criterion of the process in both training and validation/testing. The Plot of the Cross Entropy Loss is shown below. By adding more fully conneted layers we can remove ups and downs during validation phase.
 
 Loss_plot.png
+![Loss_Plot](https://user-images.githubusercontent.com/96059146/150199924-2dc72aef-8c4f-42cc-bf34-c66564d93026.PNG)
 
 
 Remember that your README should:
